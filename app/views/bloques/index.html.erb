@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bloques</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Descripcion</th>
+      <th>Estado</th>
+      <th>Localidad</th>
+      <th>Ubicacion</th>
+      <th>Custodio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bloques.each do |bloque| %>
+      <tr>
+        <td><%= bloque.tipo %></td>
+        <td><%= bloque.descripcion %></td>
+        <td><%= bloque.estado %></td>
+        <td><%= bloque.localidad %></td>
+        <td><%= bloque.ubicacion %></td>
+        <td><%= bloque.custodio %></td>
+        <td><%= link_to 'Show', bloque %></td>
+        <td><%= link_to 'Edit', edit_bloque_path(bloque) %></td>
+        <td><%= link_to 'Destroy', bloque, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bloque', new_bloque_path %>

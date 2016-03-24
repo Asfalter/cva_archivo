@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @bloque.tipo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @bloque.descripcion %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @bloque.estado %>
+</p>
+
+<p>
+  <strong>Localidad:</strong>
+  <%= @bloque.localidad %>
+</p>
+
+<p>
+  <strong>Ubicacion:</strong>
+  <%= @bloque.ubicacion %>
+</p>
+
+<p>
+  <strong>Custodio:</strong>
+  <%= @bloque.custodio %>
+</p>
+
+<%= link_to 'Edit', edit_bloque_path(@bloque) %> |
+<%= link_to 'Back', bloques_path %>

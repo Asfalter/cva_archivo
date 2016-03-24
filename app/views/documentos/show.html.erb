@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @documento.tipo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @documento.descripcion %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @documento.estado %>
+</p>
+
+<p>
+  <strong>Localidad:</strong>
+  <%= @documento.localidad %>
+</p>
+
+<p>
+  <strong>Ubicacion:</strong>
+  <%= @documento.ubicacion %>
+</p>
+
+<p>
+  <strong>Custodio:</strong>
+  <%= @documento.custodio %>
+</p>
+
+<p>
+  <strong>Bloque:</strong>
+  <%= @documento.bloque %>
+</p>
+
+<%= link_to 'Edit', edit_documento_path(@documento) %> |
+<%= link_to 'Back', documentos_path %>

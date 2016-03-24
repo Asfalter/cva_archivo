@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo: 1
+  descripcion: MyString
+  estado: 1
+  localidad: 1
+  ubicacion: 1
+  custodio: 1
+  bloque: 1
+
+two:
+  tipo: 1
+  descripcion: MyString
+  estado: 1
+  localidad: 1
+  ubicacion: 1
+  custodio: 1
+  bloque: 1

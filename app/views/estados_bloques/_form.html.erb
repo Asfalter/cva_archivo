@@ -1,0 +1,21 @@
+<%= form_for(@estados_bloque) do |f| %>
+  <% if @estados_bloque.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@estados_bloque.errors.count, "error") %> prohibited this estados_bloque from being saved:</h2>
+
+      <ul>
+      <% @estados_bloque.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_field :descripcion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,41 @@
+<%= form_for(@bloque) do |f| %>
+  <% if @bloque.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bloque.errors.count, "error") %> prohibited this bloque from being saved:</h2>
+
+      <ul>
+      <% @bloque.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipo %><br>
+    <%= f.number_field :tipo %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_field :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :estado %><br>
+    <%= f.number_field :estado %>
+  </div>
+  <div class="field">
+    <%= f.label :localidad %><br>
+    <%= f.number_field :localidad %>
+  </div>
+  <div class="field">
+    <%= f.label :ubicacion %><br>
+    <%= f.number_field :ubicacion %>
+  </div>
+  <div class="field">
+    <%= f.label :custodio %><br>
+    <%= f.number_field :custodio %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

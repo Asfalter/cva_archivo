@@ -1,5 +1,23 @@
 Rails.application.routes.draw do
-  root "pages#home"
+  resources :ubicacions
+  resources :localidads
+  resources :estados_documentos
+  resources :tipos_documentos
+  resources :documentos
+  resources :bloques
+  resources :estados_bloques
+  resources :tipos_bloques
+  devise_for :users
+  
+  devise_scope :user do
+  authenticated :user do
+    root 'pages#home', as: :authenticated_root
+  end
+
+  unauthenticated do
+    root 'devise/sessions#new', as: :unauthenticated_root
+  end
+end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
