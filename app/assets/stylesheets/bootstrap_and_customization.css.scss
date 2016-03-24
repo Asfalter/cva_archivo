@@ -1,0 +1,23 @@
+@import "bootstrap";
+
+.navbar-brand {
+  float: left;
+  padding: 10px;
+}
+
+.background_image {
+    background: image-url("Background.png");
+    height: 75px;
+    position:fixed;
+    right:0;
+    left:0;
+    bottom:0;
+}
+
+.jumbotron {
+	background-color: #f8f8f8;
+	border: 1px solid;
+	border-color: #e7e7e7;
+}
+
+
