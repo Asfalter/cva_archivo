@@ -1,27 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Localidads</h1>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-title">
+			Localidades
+		</div>
+	</div>
+	<div class="panel-body">
+		<table class="table table-condensed table-hover">
+		  <thead>
+		    <tr>
+		      <th>Descripcion</th>
+		      <th colspan="3"></th>
+		    </tr>
+		  </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Descripcion</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+		  <tbody>
+		    <% @localidads.each do |localidad| %>
+		      <tr>
+		        <td><%= localidad.descripcion %></td>
+		        <td><%= link_to 'Show', localidad %></td>
+		        <td><%= link_to 'Edit', edit_localidad_path(localidad) %></td>
+		        <td><%= link_to 'Destroy', localidad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+	</div>
+	<div class="panel-footer">
+		<%= link_to 'Nueva Localidad', new_localidad_path %> |
+		<%= link_to 'Regresar', archivo_path %>
+	</div>
+</div>
 
-  <tbody>
-    <% @localidads.each do |localidad| %>
-      <tr>
-        <td><%= localidad.descripcion %></td>
-        <td><%= link_to 'Show', localidad %></td>
-        <td><%= link_to 'Edit', edit_localidad_path(localidad) %></td>
-        <td><%= link_to 'Destroy', localidad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Localidad', new_localidad_path %>

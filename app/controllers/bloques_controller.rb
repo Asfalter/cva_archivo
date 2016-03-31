@@ -69,6 +69,6 @@ class BloquesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bloque_params
-      params.require(:bloque).permit(:tipo, :descripcion, :estado, :localidad, :ubicacion, :custodio)
+      params.require(:bloque).permit(:tipos_bloque_id, :descripcion, :estados_bloque_id, :localidad_id, :ubicacion_id, :user_id)
     end
 end

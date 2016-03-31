@@ -11,29 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160324165918) do
+ActiveRecord::Schema.define(version: 20160331164011) do
 
   create_table "bloques", force: :cascade do |t|
-    t.integer  "tipo"
+    t.integer  "tipos_bloque_id"
     t.string   "descripcion"
-    t.integer  "estado"
-    t.integer  "localidad"
-    t.integer  "ubicacion"
-    t.integer  "custodio"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "estados_bloque_id"
+    t.integer  "localidad_id"
+    t.integer  "ubicacion_id"
+    t.integer  "user_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "documentos", force: :cascade do |t|
-    t.integer  "tipo"
+    t.integer  "tipos_documento_id"
     t.string   "descripcion"
-    t.integer  "estado"
-    t.integer  "localidad"
-    t.integer  "ubicacion"
-    t.integer  "custodio"
-    t.integer  "bloque"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "estados_documento_id"
+    t.integer  "localidad_id"
+    t.integer  "ubicacion_id"
+    t.integer  "user_id"
+    t.integer  "bloque_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "estados_bloques", force: :cascade do |t|
@@ -68,9 +68,9 @@ ActiveRecord::Schema.define(version: 20160324165918) do
 
   create_table "ubicacions", force: :cascade do |t|
     t.string   "descripcion"
-    t.integer  "localidad"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.integer  "localidad_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|

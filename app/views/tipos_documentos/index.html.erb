@@ -1,27 +1,35 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Tipos Documentos</h1>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-title">
+			Tipos de Documento
+		</div>
+	</div>
+	<div class="panel-body">
+		<table class="table table-condensed table-hover">
+		  <thead>
+		    <tr>
+		      <th>Descripcion</th>
+		      <th colspan="3"></th>
+		    </tr>
+		  </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Descripcion</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+		  <tbody>
+		    <% @tipos_documentos.each do |tipos_documento| %>
+		      <tr>
+		        <td><%= tipos_documento.descripcion %></td>
+		        <td><%= link_to 'Show', tipos_documento %></td>
+		        <td><%= link_to 'Edit', edit_tipos_documento_path(tipos_documento) %></td>
+		        <td><%= link_to 'Destroy', tipos_documento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+	</div>
+	<div class="panel-footer">
+		<%= link_to 'Nuevo Tipo de Documento', new_tipos_documento_path %> |
+		<%= link_to 'Regresar', archivo_path %>
+	</div>
+</div>
 
-  <tbody>
-    <% @tipos_documentos.each do |tipos_documento| %>
-      <tr>
-        <td><%= tipos_documento.descripcion %></td>
-        <td><%= link_to 'Show', tipos_documento %></td>
-        <td><%= link_to 'Edit', edit_tipos_documento_path(tipos_documento) %></td>
-        <td><%= link_to 'Destroy', tipos_documento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Tipos documento', new_tipos_documento_path %>

@@ -1,6 +1,14 @@
-<h1>Editing Estados Documento</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @estados_documento %> |
-<%= link_to 'Back', estados_documentos_path %>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-title">
+			Editar Estado de Documento
+		</div>
+	</div>
+	<div class="panel-body">
+		<%= render 'form' %>
+	</div>
+	<div class="panel-footer">
+		<%= link_to 'Show', @estados_documento %> |
+		<%= link_to 'Back', estados_documentos_path %>
+	</div>
+</div>

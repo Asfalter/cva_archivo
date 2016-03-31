@@ -2,7 +2,7 @@
 
 <p>
   <strong>Tipo:</strong>
-  <%= @bloque.tipo %>
+  <%= @bloque.tipos_bloque_id %>
 </p>
 
 <p>
@@ -12,22 +12,22 @@
 
 <p>
   <strong>Estado:</strong>
-  <%= @bloque.estado %>
+  <%= @bloque.estados_bloque_id %>
 </p>
 
 <p>
   <strong>Localidad:</strong>
-  <%= @bloque.localidad %>
+  <%= @bloque.localidad_id %>
 </p>
 
 <p>
   <strong>Ubicacion:</strong>
-  <%= @bloque.ubicacion %>
+  <%= @bloque.ubicacion_id %>
 </p>
 
 <p>
   <strong>Custodio:</strong>
-  <%= @bloque.custodio %>
+  <%= @bloque.user_id %>
 </p>
 
 <%= link_to 'Edit', edit_bloque_path(@bloque) %> |

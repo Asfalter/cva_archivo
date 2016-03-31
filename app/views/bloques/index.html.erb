@@ -18,12 +18,12 @@
   <tbody>
     <% @bloques.each do |bloque| %>
       <tr>
-        <td><%= bloque.tipo %></td>
+        <td><%= bloque.tipos_bloque_id %></td>
         <td><%= bloque.descripcion %></td>
-        <td><%= bloque.estado %></td>
-        <td><%= bloque.localidad %></td>
-        <td><%= bloque.ubicacion %></td>
-        <td><%= bloque.custodio %></td>
+        <td><%= bloque.estados_bloque_id %></td>
+        <td><%= bloque.localidad_id %></td>
+        <td><%= bloque.ubicacion_id %></td>
+        <td><%= bloque.user_id %></td>
         <td><%= link_to 'Show', bloque %></td>
         <td><%= link_to 'Edit', edit_bloque_path(bloque) %></td>
         <td><%= link_to 'Destroy', bloque, method: :delete, data: { confirm: 'Are you sure?' } %></td>

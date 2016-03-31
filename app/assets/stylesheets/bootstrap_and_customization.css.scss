@@ -21,6 +21,37 @@
 	border-color: #e7e7e7;
 }
 
+#box {
+	height: 250px;
+	width: 250px;
+	padding: 10px;
+	margin: 0 auto;
+	background-color: #F7CC41;
+	color: white;
+	font-size: 150%;
+}
+
+#smallBox {
+	height: 100px;
+	width: 100px;
+	padding: 10px;
+	margin:10px;
+	background-color: #F7CC41;
+	color: white;
+}
+
+#box:hover {
+	background-color: darken(#F7CC41, 10%);
+}
+
+#smallBox:hover {
+	background-color: darken(#F7CC41, 10%);
+}
+
+#links:hover {
+	text-decoration: none;
+}
+
 
 
 

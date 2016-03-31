@@ -1,6 +1,14 @@
-<h1>Editing Tipos Documento</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @tipos_documento %> |
-<%= link_to 'Back', tipos_documentos_path %>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-title">
+			Editar Tipo de Documento
+		</div>
+	</div>
+	<div class="panel-body">
+		<%= render 'form' %>
+	</div>
+	<div class="panel-footer">
+		<%= link_to 'Show', @tipos_documento %> |
+		<%= link_to 'Regresar', tipos_documentos_path %>
+	</div>
+</div>

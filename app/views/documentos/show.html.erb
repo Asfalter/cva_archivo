@@ -2,7 +2,7 @@
 
 <p>
   <strong>Tipo:</strong>
-  <%= @documento.tipo %>
+  <%= @documento.tipos_documento_id %>
 </p>
 
 <p>
@@ -12,27 +12,27 @@
 
 <p>
   <strong>Estado:</strong>
-  <%= @documento.estado %>
+  <%= @documento.estados_documento_id %>
 </p>
 
 <p>
   <strong>Localidad:</strong>
-  <%= @documento.localidad %>
+  <%= @documento.localidad_id %>
 </p>
 
 <p>
   <strong>Ubicacion:</strong>
-  <%= @documento.ubicacion %>
+  <%= @documento.ubicacion_id %>
 </p>
 
 <p>
   <strong>Custodio:</strong>
-  <%= @documento.custodio %>
+  <%= @documento.user_id %>
 </p>
 
 <p>
   <strong>Bloque:</strong>
-  <%= @documento.bloque %>
+  <%= @documento.bloque_id %>
 </p>
 
 <%= link_to 'Edit', edit_documento_path(@documento) %> |

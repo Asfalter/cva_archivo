@@ -1,27 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Tipos Bloques</h1>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-title">
+			Tipos de Bloque
+		</div>
+	</div>
+	<div class="panel-body">
+		<table class="table table-condensed table-hover">
+		  <thead>
+		    <tr>
+		      <th>Descripcion</th>
+		      <th colspan="3"></th>
+		    </tr>
+		  </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Descripcion</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tipos_bloques.each do |tipos_bloque| %>
-      <tr>
-        <td><%= tipos_bloque.descripcion %></td>
-        <td><%= link_to 'Show', tipos_bloque %></td>
-        <td><%= link_to 'Edit', edit_tipos_bloque_path(tipos_bloque) %></td>
-        <td><%= link_to 'Destroy', tipos_bloque, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Tipos bloque', new_tipos_bloque_path %>
+		  <tbody>
+		    <% @tipos_bloques.each do |tipos_bloque| %>
+		      <tr>
+		        <td><%= tipos_bloque.descripcion %></td>
+		        <td><%= link_to 'Show', tipos_bloque %></td>
+		        <td><%= link_to 'Edit', edit_tipos_bloque_path(tipos_bloque) %></td>
+		        <td><%= link_to 'Destroy', tipos_bloque, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+	</div>
+	<div class="panel-footer">
+		<%= link_to 'Nuevo Tipo de Bloque', new_tipos_bloque_path %> |
+		<%= link_to 'Regresar', archivo_path %>
+	</div>
+</div>

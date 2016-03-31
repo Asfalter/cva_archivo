@@ -1,6 +1,14 @@
-<h1>Editing Localidad</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @localidad %> |
-<%= link_to 'Back', localidads_path %>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-title">
+			Editar Localidad
+		</div>
+	</div>
+	<div class="panel-body">
+		<%= render 'form' %>
+	</div>
+	<div class="panel-footer">
+		<%= link_to 'Show', @localidad %> |
+		<%= link_to 'Regresar', localidads_path %>
+	</div>
+</div>

@@ -1,6 +1,14 @@
-<h1>Editing Estados Bloque</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @estados_bloque %> |
-<%= link_to 'Back', estados_bloques_path %>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-title">
+			Editar Estado de Bloque
+		</div>
+	</div>
+	<div class="panel-body">
+		<%= render 'form' %>
+	</div>
+	<div class="panel-footer">
+		<%= link_to 'Show', @estados_bloque %> |
+		<%= link_to 'Regresar', estados_bloques_path %>
+	</div>
+</div>

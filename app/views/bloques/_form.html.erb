@@ -11,31 +11,31 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :tipo %><br>
-    <%= f.number_field :tipo %>
+  <div class="field form-group">
+    <%= f.label :tipos_bloque_id %><br>
+    <%= f.collection_select :tipos_bloque_id, TiposBloque.all, :id, :descripcion, {prompt: "Selecciona un tipo"}, {class: "form-control"} %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :descripcion %><br>
-    <%= f.text_field :descripcion %>
+    <%= f.text_field :descripcion, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :estado %><br>
-    <%= f.number_field :estado %>
+  <div class="field form-group">
+    <%= f.label :estados_bloque_id %><br>
+    <%= f.collection_select :estados_bloque_id, EstadosBloque.all, :id, :descripcion, {prompt: "Selecciona un estado"}, {class: "form-control"} %>
   </div>
-  <div class="field">
-    <%= f.label :localidad %><br>
-    <%= f.number_field :localidad %>
+  <div class="field form-group">
+    <%= f.label :localidad_id %><br>
+    <%= f.collection_select :localidad_id, Localidad.all, :id, :descripcion, {prompt: "Selecciona una localidad"}, {class: "form-control"} %>
   </div>
-  <div class="field">
-    <%= f.label :ubicacion %><br>
-    <%= f.number_field :ubicacion %>
+  <div class="field form-group">
+    <%= f.label :ubicacion_id %><br>
+    <%= f.collection_select :ubicacion_id, Ubicacion.all, :id, :descripcion, {prompt: "Selecciona una ubicacion"}, {class: "form-control"} %>
   </div>
-  <div class="field">
-    <%= f.label :custodio %><br>
-    <%= f.number_field :custodio %>
+  <div class="field form-group">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-default"%>
   </div>
 <% end %>
