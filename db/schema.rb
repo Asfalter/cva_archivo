@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160331164011) do
+ActiveRecord::Schema.define(version: 20160401155023) do
 
   create_table "bloques", force: :cascade do |t|
     t.integer  "tipos_bloque_id"
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(version: 20160331164011) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
