@@ -4,16 +4,7 @@ class DocumentosController < ApplicationController
   # GET /documentos
   # GET /documentos.json
   def index
-    @filterrific = initialize_filterrific(
-        Documento,
-        params[:filterrific]
-      ) or return
-      @documentos = @filterrific.find.page(params[:page])
-
-      respond_to do |format|
-        format.html
-        format.js
-      end
+    @documentos = Documento.all
   end
 
   # GET /documentos/1
