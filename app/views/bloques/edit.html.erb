@@ -1,6 +1,13 @@
-<h1>Editing Bloque</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @bloque %> |
-<%= link_to 'Back', bloques_path %>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-title">
+		Editar Bloque
+		</div>
+	</div>
+	<div class="panel-body">
+		<%= render 'form' %>
+	</div>
+	<div class="panel-footer">
+		<%= link_to 'Regresar', archivo_path %>
+	</div>
+</div>

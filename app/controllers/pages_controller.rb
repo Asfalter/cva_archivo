@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def archivo 
 	end 
+
+	def administracion
+	end
 end
