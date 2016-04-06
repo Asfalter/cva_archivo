@@ -4,4 +4,5 @@ class Documento < ActiveRecord::Base
 	belongs_to :localidad
 	belongs_to :ubicacion
 	belongs_to :bloque
+	belongs_to :user
 end
